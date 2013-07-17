@@ -1,13 +1,19 @@
-#!/usr/bin/env node
+// Logging
 winston = require('winston');
 logging = new winston.Logger({
-  transports: [ new winston.transports.Console({
-    level: 'error'
+  transports: [ new winston.transports.File({
+    level: 'error',
+    timestamp: true,
+    json: false,
+    filename: '/var/log/log.io/harvester.log'
   })]
 });
-homeDir = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-conf = require(homeDir + '/.log.io/harvester.conf').config;
+
+// Config Files
+conf = require('/etc//log.io/harvester.conf').config;
 conf.logging = logging;
+
+// DaemonProcess
 harvester = require('log.io');
 harvester = new harvester.LogHarvester(conf);
 harvester.run();
