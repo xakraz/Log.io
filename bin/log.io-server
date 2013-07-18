@@ -9,9 +9,9 @@ logging = new winston.Logger({
 });
 
 // ConfigFiles
-webConf = require('/etc//log.io/web_server.conf').config;
+webConf = require('/etc/log.io/web_server.conf').config;
 webConf.logging = logging;
-logConf = require('/etc//log.io/log_server.conf').config;
+logConf = require('/etc/log.io/log_server.conf').config;
 logConf.logging = logging;
 
 // ServerProcess

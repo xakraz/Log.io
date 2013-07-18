@@ -10,7 +10,7 @@ logging = new winston.Logger({
 });
 
 // Config Files
-conf = require('/etc//log.io/harvester.conf').config;
+conf = require('/etc/log.io/harvester.conf').config;
 conf.logging = logging;
 
 // DaemonProcess
