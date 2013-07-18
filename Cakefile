@@ -39,24 +39,10 @@ task 'templates', "Compiles templates/*.html to src/templates.coffee", ->
   buildTemplate()
 
 task 'ensure:configuration', "Ensures that config files exist in ~/.log.io/", ->
-  console.log "Creating ~/.log.io/ for configuration files."
-  console.log "If this fails, run npm using a specific user: npm install -g log.io --user 'ubuntu'"
-  homedir = process.env[if process.platform is 'win32' then 'USERPROFILE' else 'HOME']
-  ldir = homedir + '/.log.io/'
-  fs.mkdirSync ldir if not fs.existsSync ldir
-  for c in ['harvester', 'log_server', 'web_server']
-    path = ldir + "#{c}.conf"
-    copyFile "./conf/#{c}.conf", path if not fs.existsSync path
+  console.log "Deactivated"
 
 task 'func_test', "Compiles & runs functional tests in test/", ->
-  console.log "Compiling test/*.coffee to test/lib/*.js..."
-  exec "#{COFFEE} --compile --output #{__dirname}/test/lib/ #{__dirname}/test/", (err, stdout, stderr) ->
-    throw err if err
-    console.log stdout + stderr if stdout + stderr
-    console.log "Running tests..."
-    exec "#{MOCHA} --reporter spec test/lib/functional.js", (err, stdout, stderr) ->
-      throw err if err
-      console.log stdout + stderr if stdout + stderr
+  console.log "Deactivated"
 
 copyFile = (from, to) ->
   fs.createReadStream(from).pipe fs.createWriteStream to
