@@ -5,6 +5,7 @@ README.md     usr/lib/log.io/node_modules/log.io/
 bin/node      usr/lib/log.io/node_modules/log.io/bin/
 index.html    usr/lib/log.io/node_modules/log.io/
 index.js      usr/lib/log.io/node_modules/log.io/
+lib           usr/lib/log.io/node_modules/log.io/
 node_modules  usr/lib/log.io/node_modules/log.io/
 package.json  usr/lib/log.io/node_modules/log.io/
 src           usr/lib/log.io/node_modules/log.io/
