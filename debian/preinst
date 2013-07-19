@@ -1,8 +1,8 @@
 #!/bin/sh
-set -e
+#set -e
 
 ## Create Specific User to Run Log.io services
-id log.io
+id log.io 2>/dev/null
 if [ $? != 0 ] ; then
   adduser --system --home /usr/lib/log.io --force-badname log.io
   usermod -g daemon -G adm -a log.io
