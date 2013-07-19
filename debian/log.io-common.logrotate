@@ -1,0 +1,8 @@
+/var/log/log.io/*.log {
+       compress
+       nodelaycompress
+       copytruncate
+       dateext
+       daily
+       rotate 14
+}

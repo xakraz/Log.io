@@ -1,0 +1,3 @@
+bin/log.io-server     usr/lib/log.io/node_modules/log.io/bin/
+conf/log_server.conf  etc/log.io/
+conf/web_server.conf  etc/log.io/

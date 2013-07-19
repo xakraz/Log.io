@@ -1,0 +1,41 @@
+Source: log.io
+Section: contrib/web
+Priority: extra
+Maintainer: Xavier Krantz <xkrantz@viadeoteam.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/NarrativeScience/Log.io
+Vcs-Git: git://git@github.com/NarrativeScience/Log.io.git
+
+Package: log.io-harvester
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, log.io-common
+Description: Log.io Harvesters client watch log files for changes on a node, 
+  and send new log messages to the server via TCP.
+  Log streams are defined by mapping file paths to a stream
+  name in harvester configuration.
+  .
+  Powered by node.js + socket.io
+
+Package: log.io-server
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, log.io-common
+Description: Log.io Server uses a stateless TCP API to receive log messages
+  and broadcasts them to web clients via socket.io.
+  Third party harvesters can send messages to the server using simple TCP
+  connection and writing properly formatted messages to the socket.
+  Fore more details, read the API documentation on Homepage
+  .
+  Powered by node.js + socket.io
+
+Package: log.io-common
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Log.io common lib.
+  Real-time log monitoring in your browser http://logio.org
+  .
+  Users browse streams and nodes in the web UI, and activate (stream,
+  node) pairs to view and search log messages in screen widgets.
+  .
+  Powered by node.js + sokect.io
+  WARNING : This package provide an embeded NodeJS binary !

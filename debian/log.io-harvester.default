@@ -1,0 +1,4 @@
+# Defaults for log.io-harvester - sourced by /etc/init.d/log.io-harvester
+
+# Start on boot?
+START=no

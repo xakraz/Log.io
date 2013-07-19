@@ -1,0 +1,6 @@
+/etc/log.io
+/usr/lib/log.io
+/usr/lib/log.io/node_modules
+/usr/lib/log.io/node_modules/log.io
+/var/log/log.io
+/var/run/log.io

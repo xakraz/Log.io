@@ -1,0 +1,2 @@
+bin/log.io-harvester  usr/lib/log.io/node_modules/log.io/bin/
+conf/harvester.conf   etc/log.io/
