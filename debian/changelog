@@ -1,3 +1,9 @@
+log.io (0.3.3-2) unstable; urgency=low
+
+  * Fix pre/postinst scripts for user creation 
+
+ -- root-debbuilder <root@debbuilder.integ.viadeo.com>  Fri, 19 Jul 2013 14:19:50 +0200
+
 log.io (0.3.3-1) unstable; urgency=low
 
   * Initial release.
