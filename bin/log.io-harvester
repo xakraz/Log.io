@@ -1,11 +1,10 @@
 // Logging
 winston = require('winston');
 logging = new winston.Logger({
-  transports: [ new winston.transports.File({
+  transports: [ new winston.transports.Console({
     level: 'error',
     timestamp: true,
     json: false,
-    filename: '/var/log/log.io/harvester.log'
   })]
 });
 
